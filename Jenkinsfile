@@ -17,6 +17,15 @@ pipeline {
                 '''
             }
         }
+
+        stage('Install Doxygen') {
+            steps {
+                sh '''
+                    apt update
+                    apt install -y doxygen
+                '''
+            }
+        }
         
         stage('Setup Environment') {
             steps {
