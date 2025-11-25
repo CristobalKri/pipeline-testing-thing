@@ -73,6 +73,15 @@ pipeline {
             }
         }
 
+        stage('Generate Doxygen Documentation') {
+            steps {
+                sh '''
+                    # Run Doxygen using the Doxyfile configuration
+                    doxygen /path/to/Doxyfile
+                '''
+            }
+        }
+
         stage('Publish Reports') {
             steps {
                 publishHTML([
