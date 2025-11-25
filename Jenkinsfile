@@ -55,7 +55,7 @@ pipeline {
                 }
             }
         }
-        stage('Dependency Check') {
+        stage('DependencyCheck') {
             environment {
                 NVD_API_KEY = credentials('nvdApiKey')
             }
